@@ -1,0 +1,19 @@
+Several solutions exist to address this issue.  The most common is using a clearfix technique. This involves adding extra CSS to the container to clear the floats:
+
+```css
+.container {
+  width: 300px;
+  border: 1px solid black;
+  /* clearfix */
+  overflow: hidden;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  float: left;
+}
+```
+
+Alternatively, you could avoid floats altogether and use flexbox or grid for layout, which are better suited to modern layout scenarios and generally avoid this type of issue.  Another option is to remove the `:last-child` selector and handle clearing floats through a different method. The best solution depends on the overall CSS structure and complexity of the layout.
