@@ -1,0 +1,21 @@
+The following CSS code snippet demonstrates an issue with unexpected behavior when using the `:last-child` pseudo-class with floated elements:
+
+```css
+.container {
+  width: 300px;
+  border: 1px solid black;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  float: left;
+}
+
+.item:last-child {
+  clear: both;
+}
+```
+
+When the number of `.item` elements is not a multiple of 3, the last element will clear the float, causing the container to collapse unexpectedly. This is because the `clear: both` is applied to a floated element.
